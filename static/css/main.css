@@ -1,0 +1,141 @@
+/** {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #12475f;
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+#showcase {
+  height: 300px;
+}
+
+#showcase h1 {
+  font-size: 50px;
+  line-height: 1.3;
+  position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+
+#content {
+  position: relative;
+  animation-name: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: #fff 1px solid;
+  margin-top: 40px;
+  opacity: 0;
+  animation-name: btn;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  transform: rotateY(180deg);
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  height: 10vh;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  list-style: none;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.home,
+.about {
+  height: 90vh;
+  position: absolute;
+  width: 100%;
+}
+
+.home-content,
+.about-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  img {
+    height: 50%;
+  }
+  h1 {
+    font-size: 50px;
+    margin: 30px 0px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+.home {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.about {
+  background-image: linear-gradient(to top, red 0%, white 100%);
+}

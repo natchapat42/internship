@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Python Flask Upload and display image</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+    .image-preview {
+      width: 300px;
+      min-height: 100px;
+      border: 2px solid #dddddd;
+      margin-top: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #cccccc;
+    }
+
+    .image-preview__img {
+      display: none;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<p><h1 align="center">Classification Images</h1></p>
+<!--<p><h1 align="center">Python Flask Upload and display image</h1></p>-->
+<div class="container">
+<div class="row">
+    <h2>Select a file to upload</h2>
+
+    <!--
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+  -->
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+
+    <form method="post" action="/predict" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" id="picture" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+        <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image" />
+            <span class="image-preview__default-text"> Image Preview </span>
+        </div>
+    </form>
+
+    {% if answer %}
+      <p>Classification Type is : </p> {{answer}}
+    {% endif %}
+
+</div>
+</div>
+
+<script>
+    const picture = document.getElementById("picture");
+    const previewContainer = document.getElementById("imagePreview");
+    const previewImage = previewContainer.querySelector(
+      ".image-preview__image"
+    );
+    const previewDefaultText = previewContainer.querySelector(
+      ".image-preview__default-text"
+    );
+
+    picture.addEventListener("change", function () {
+      const file = this.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        previewImage.style.display = "block";
+        previewDefaultText.style.display = "none";
+
+        reader.addEventListener("load", function () {
+          previewImage.setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(file);
+      } else {
+        previewImage.style.display = "null";
+        previewDefaultText.style.display = "null";
+        previewImage.setAttribute("src", "");
+      }
+    });
+  </script> 
+
+</body>
+</html>

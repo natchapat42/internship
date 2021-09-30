@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  left: 7vw;
+  /*background: black;*/
+  color: White;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Moving Background */
+
+  position: relative;
+  background: url(/static/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: moving 10s linear infinite;
+  animation: moving 30s linear infinite;
+  /*overflow: hidden;*/
+}
+
+@keyframes moving {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+/* Preloader */
+
+.loader {
+  background: white;
+  height: 1200px;
+  width: 1500px;
+  position: absolute;
+  animation-name: preloader;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  top: -10px;
+  z-index: 1;
+}
+
+@keyframes preloader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: -1800px;
+  }
+}
+
+/* descriptions */
+
+.menu__bar {
+  top: 0;
+  left: 0;
+  margin: 0px;
+  padding: 30px;
+  height: 100vh;
+  width: 2vw;
+  position: fixed;
+  background: white;
+  writing-mode: vertical-lr;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.menu__bar a {
+  color: grey;
+  text-decoration: none; /* delete underline*/
+  margin: 25px;
+  margin-top: 40px;
+}
+
+.vertical__menu a:hover {
+  /*color: rgb(227, 129, 235);*/
+  color: rgb(0, 0, 121);
+}
+
+.name {
+  top: -80px;
+  position: relative;
+  animation-name: name_show;
+  animation-duration: 1.5s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.name h1 {
+  font-size: 0.8rem;
+}
+
+.name h2 {
+  font-size: 0.8rem;
+}
+
+@keyframes name_show {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.hello {
+  position: relative;
+  animation-name: hello_show;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.hello h1 {
+  font-size: 6rem;
+  margin-top: 12rem;
+  margin-bottom: 1rem;
+  margin-left: 10rem;
+}
+
+.hello hr {
+  color: white;
+  width: 20%;
+  transform: translateX(-310px);
+}
+
+.hello p {
+  font-size: 1.2rem;
+  margin-left: 15rem;
+}
+
+@keyframes hello_show {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contact {
+  bottom: -100px;
+  margin-top: 13rem;
+  display: flex;
+  margin-left: 65vw;
+
+  position: relative;
+  animation-name: contact_show;
+  animation-duration: 1.5s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.contact h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact h2 {
+  font-size: 0.8rem;
+}
+
+.contact__telephone {
+  margin-left: 4rem;
+}
+
+@keyframes contact_show {
+  0% {
+    bottom: -40px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/* social media icon */
+
+.social_media {
+  top: -80px;
+  position: relative;
+  animation-name: social_show;
+  animation-duration: 1.5s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.social_media a {
+  color: #aaaaaa;
+  text-decoration: none;
+  margin: 8px;
+  margin-top: -35px;
+  font-size: 1.5rem;
+  display: inline-block;
+  float: right;
+}
+
+.social_media a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@keyframes social_show {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 0px;
+  }
+}

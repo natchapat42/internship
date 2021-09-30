@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css')
+    }}"
+    />
+
+    <!-- Music =1&playlist=SN3xlcjbvUo -->
+    <iframe
+      src="https://www.youtube.com/embed/SN3xlcjbvUo?autoplay=1&loop"
+      width="0"
+      height="0"
+      frameborder="0"
+      allow="autoplay"
+    ></iframe>
+  </head>
+
+  <body>
+    <!-- Menu Bar -->
+
+    <div class="menu__bar">
+      <div class="vertical__menu">
+        <!-- About me -->
+        <a href="/">HOME</a>
+
+        <!-- Internship -->
+        <a href="/about">ABOUT ME</a>
+
+        <!-- ML -->
+        <a href="/ml">MACHINE LEARNING</a>
+      </div>
+    </div>
+
+    <!-- Menu page -->
+
+    <main data-router-wrapper>
+      <section data-router-view="home" class="home">
+        <!-- Loading Screen -->
+
+        <div class="loader"></div>
+        <!-- Home Page -->
+        <div class="main__description">
+          <div class="name">
+            <h1>Natchapat Mongkolluck</h1>
+            <h2>FIBO | 2021</h2>
+          </div>
+
+          <!-- Social -->
+
+          <div class="social_media">
+            <a
+              href="https://www.facebook.com/tangkwarkub.mongkolluk/"
+              target="_blank"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/marchh.hazel/" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://github.com/natchapat42" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+          ></script>
+
+          <!---->
+
+          <div class="description">
+            <div class="hello">
+              <h1>Hello</h1>
+              <!--<hr />-->
+              <p>
+                This is my first page for my internship about Web Development &
+                Machine Learning
+              </p>
+            </div>
+
+            <div class="contact">
+              <div class="contact__email">
+                <h1>E-mail:</h1>
+                <h2>natchapat.42@mail.kmutt.ac.th</h2>
+              </div>
+              <div class="contact__telephone">
+                <h1>Telephone :</h1>
+                <h2>(+66)3838-9044</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Js -->
+
+    <script src="./index.js"></script>
+  </body>
+</html>

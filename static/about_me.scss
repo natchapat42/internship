@@ -1,0 +1,25 @@
+.body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.loader {
+  background: white;
+  height: 1200px;
+  width: 1500px;
+  position: absolute;
+  animation-name: preloader;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  top: -10px;
+  z-index: 1;
+}
+
+@keyframes preloader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: -1800px;
+  }
+}
