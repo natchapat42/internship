@@ -1,7 +1,7 @@
 from keras.models import load_model
 from skimage.transform import resize
-import tensorflow as tf
-from tensorflow import keras
+#import tensorflow as tf
+#from tensorflow import keras
 import glob
 import matplotlib.pyplot as plt
 from PIL import ImageTk, Image
@@ -10,7 +10,7 @@ import numpy
 import cv2
 
 # from keras.utils import to_categorical
-from tensorflow.keras.utils import to_categorical
+#from tensorflow.keras.utils import to_categorical
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -20,7 +20,6 @@ type = ['airplane', 'automobile', 'bird', 'cat',
 model = load_model('classification_model.h5')
 
 '''
-
 path = glob.glob("C:/Users/march/Desktop/intern/ml/static/uploads/*.jpg")
 
 pictures = path[6]
@@ -77,3 +76,6 @@ def classification(picture):
     type2 = type[max]
 
     return(type2)
+
+
+# classification(pictures)
