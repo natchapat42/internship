@@ -2,10 +2,6 @@ from keras.models import load_model
 from skimage.transform import resize
 import tensorflow as tf
 from tensorflow import keras
-from keras.datasets import cifar10
-from keras.models import Sequential
-from keras.layers import Dense, Flatten, Conv2D, MaxPool2D, Dropout
-from tensorflow.keras import layers
 import glob
 import matplotlib.pyplot as plt
 from PIL import ImageTk, Image
@@ -32,17 +28,16 @@ pictures = path[6]
 for i in range(len(path)):
 
     print(path[i])
-
 '''
 
 
 def classification(picture):
 
-    # picture = Image.open(picture)
+    #picture = Image.open(picture)
 
-    # image_sequence = picture.getdata()
+    #image_sequence = picture.getdata()
 
-    # image_array = np.array(image_sequence)
+    #image_array = np.array(image_sequence)
 
     resized_image = resize(picture, (32, 32, 3))
 
