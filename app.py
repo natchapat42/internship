@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect, flash, url_for
 from werkzeug.utils import secure_filename
 import urllib.request
 import os
-from PIL import Image
-import glob
+#from PIL import Image
+#import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
@@ -66,8 +66,7 @@ def upload_image():
 
         name = file.filename
 
-        path = glob.glob(
-            "C:/Users/march/Desktop/intern/ml/static/uploads/*.jpg")
+        #path = glob.glob("C:/Users/march/Desktop/intern/ml/static/uploads/*.jpg")
 
         #i = Image.open(delete)
 

@@ -2,9 +2,9 @@ from keras.models import load_model
 from skimage.transform import resize
 #import tensorflow as tf
 #from tensorflow import keras
-import glob
+#import glob
 import matplotlib.pyplot as plt
-from PIL import ImageTk, Image
+#from PIL import Image
 
 import numpy
 #import cv2
