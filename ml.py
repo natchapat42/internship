@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from PIL import ImageTk, Image
 
 import numpy
-import cv2
+#import cv2
 
 # from keras.utils import to_categorical
 #from tensorflow.keras.utils import to_categorical
